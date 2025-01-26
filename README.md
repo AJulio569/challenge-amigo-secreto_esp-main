@@ -27,7 +27,8 @@ En este desafío, desarrollarás una aplicación que permita a los usuarios ingr
 ## 🧰Instalación
 1. Clona el repositorio:
    ```sh
-   git clone https://github.com/tu-usuario/juego-de-amigo-secreto.git
+   git clone https://github.com/AJulio569/challenge-amigo-secreto_esp-main.git
+   
    
 2. Ejecutar: Abre el archivo index.html en tu navegador para ejecutar la aplicación.
 
