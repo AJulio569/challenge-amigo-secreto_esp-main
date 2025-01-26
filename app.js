@@ -9,7 +9,7 @@ function agregarAmigo() {
 
   if (nombre && !jugadores.includes(nombre)) {
     jugadores.push(nombre);
-    limpiarListaExistente('resultado');
+    limpiarListaExistente("resultado");
     visualizarListaDeJugadores();
     limpiarInput(nombreInput);
   } else {
@@ -17,12 +17,9 @@ function agregarAmigo() {
   }
 }
 
-
-
 // Fuinción para visualizar jugadores participantes.
 function visualizarListaDeJugadores() {
-  const listaDeJugadores = limpiarListaExistente('listaAmigos');
-  
+  const listaDeJugadores = limpiarListaExistente("listaAmigos");
 
   jugadores.forEach((jugador) => {
     const li = document.createElement("li");
@@ -33,11 +30,9 @@ function visualizarListaDeJugadores() {
 
 // Función sortear amigos.
 function sortearAmigo() {
-
   if (jugadores.length > 0) {
     const amigoSectreto = [...jugadores];
-    const resultado = limpiarListaExistente('resultado');
-    
+    const resultado = limpiarListaExistente("resultado");
 
     let amigo;
     amigo = amigoSectreto[Math.floor(Math.random() * amigoSectreto.length)];
@@ -45,16 +40,17 @@ function sortearAmigo() {
     const li = document.createElement("li");
     li.textContent = `El amigo secreto sorteado es : ${amigo}`;
     resultado.appendChild(li);
-    
-     limpiarListaExistente("listaAmigos");
-     jugadores=[];
+
+    limpiarListaExistente("listaAmigos");
+    jugadores = [];
   } else {
-    alert("Debe haber al menos dos jugadores para asignar amigos secretos.");
+    alert("Debe haber al menos un jugadores para asignar amigos secretos.");
     return;
   }
 }
- // Función limpia y retorna una lista(li).
+// Función limpia y retorna una lista(li).
 function limpiarListaExistente(idLista) {
+
   let lista = document.getElementById(idLista);
   lista.innerHTML = "";
   return lista;
@@ -62,5 +58,5 @@ function limpiarListaExistente(idLista) {
 
 // Función para limpiar input o caja de texto.
 function limpiarInput(limpiar) {
-    limpiar.value = "";
-  }
+  limpiar.value = "";
+}
